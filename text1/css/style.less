@@ -1,0 +1,26 @@
+@nice-blue:#f00;
+.box1{
+	color: @nice-blue;
+	.border;
+	.radius(10px);
+}
+.border{
+	border-top: 1px solid red;
+	border-left: 1px solid black;
+	border-bottom: 1px solid green;
+	border-right: 1px solid orange;
+}
+.radius(@value){
+	-webkit-border-radius:@value;
+	border-radius: @value;
+}
+.sanjiao_model(bottom;@width:3px;@color:#333){
+	border-width: @width;
+	border-color: transparent transparent @color transparent;
+	border-style: dashed dashed solid dashed;
+}
+.sanjiao{
+	width: 0;
+	height: 0;
+	.sanjiao_model(bottom;10px);
+}
